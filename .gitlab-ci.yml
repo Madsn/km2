@@ -10,7 +10,7 @@ types:
 job_build:
   type: build
   script:
-  - pwd
+  - cd
   only:
   - master
   tags:
