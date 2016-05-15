@@ -10,7 +10,7 @@ types:
 job_build:
   type: build
   script:
-  - cd
+  - meteor npm install
   only:
   - master
   tags:
@@ -20,6 +20,7 @@ job_test:
   type: test
   script:
   - echo "testing ----"
+  - meteor npm test
   only:
   - master
   tags:
