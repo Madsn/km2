@@ -1,0 +1,26 @@
+before_script:
+  - echo "======================================"
+  - echo "==== START auto full script v0.1 ====="
+  - echo "======================================"
+
+types:
+  - build
+  - test
+
+job_build:
+  type: build
+  script:
+  - pwd
+  only:
+  - master
+  tags:
+  - master
+
+job_test:
+  type: test
+  script:
+  - echo "testing ----"
+  only:
+  - master
+  tags:
+  - master
