@@ -1,3 +1,18 @@
 <template name="admin">
   <h1>Admin</h1>
+  {{> add_new_kennel}}
+  {{> list_existing_kennels}}
+</template>
+
+<template name="add_new_kennel">
+  <button>Add a kennel</button>
+</template>
+
+<template name="list_existing_kennels">
+  <h2>List kennels</h2>
+  <ul>
+  {{#each kennels}}
+    <li>Name: {{name}}, Admin: {{admin}}</li>
+  {{/each}}
+  </ul>
 </template>
