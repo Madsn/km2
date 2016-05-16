@@ -28,3 +28,5 @@ huttonr:bootstrap3
 less
 kadira:blaze-layout
 session
+zimme:active-route
+arillo:flow-router-helpers
