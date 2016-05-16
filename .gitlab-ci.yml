@@ -11,7 +11,7 @@ job_build:
   stage: build
   script:
   - cd
-  - call meteor npm install
+  - meteor npm install
   only:
   - master
   tags:
@@ -21,7 +21,7 @@ job_test:
   stage: test
   script:
   - echo "testing ----"
-  - call meteor npm test
+  - meteor npm test
   only:
   - master
   tags:
