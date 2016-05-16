@@ -3,12 +3,12 @@ before_script:
   - echo "==== START auto full script v0.1 ====="
   - echo "======================================"
 
-types:
+stages:
   - build
   - test
 
 job_build:
-  type: build
+  stage: build
   script:
   - meteor npm install
   only:
@@ -17,7 +17,7 @@ job_build:
   - master
 
 job_test:
-  type: test
+  stage: test
   script:
   - echo "testing ----"
   - meteor npm test
