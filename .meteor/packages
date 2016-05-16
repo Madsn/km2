@@ -30,3 +30,5 @@ kadira:blaze-layout
 session
 zimme:active-route
 arillo:flow-router-helpers
+accounts-password
+ian:accounts-ui-bootstrap-3
