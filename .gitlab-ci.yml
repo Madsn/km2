@@ -2,6 +2,8 @@ before_script:
   - echo "======================================"
   - echo "==== START auto full script v0.1 ====="
   - echo "======================================"
+  - echo "cleaning up builds folder"
+  - rm -rf /home/gitlab-runner/builds
 
 stages:
   - build
