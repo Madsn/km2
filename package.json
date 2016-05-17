@@ -9,6 +9,6 @@
   },
   "scripts": {
   	"test": "meteor test --once --driver-package dispatch:mocha-phantomjs",
-  	"test-full-app": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
+  	"test-full": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
   }
 }

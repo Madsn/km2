@@ -1,20 +1,18 @@
 import {Kennels} from '../../../common/collections/kennels.js';
 
-Template.add_new_kennel.events({
-  'click button'(event, instance) {
-    Meteor.call('add_new_kennel', {
-      name: 'testing',
-      admin: 'admin'
-    });
-  }
-});
-
 Template.list_existing_kennels.helpers({
   'kennels': function() {
     return Kennels.find();
   }
 });
 
+Template.list_existing_kennels.events({
+  'click #delete-kennel-btn'() {
+    if (confirm('Really delete "' + this.name + '"?')) {
+      Meteor.call('deleteKennel', this._id);
+    }
+  }
+});
 
 FlowRouter.route('/admin', {
   name: 'Admin',

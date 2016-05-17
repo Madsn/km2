@@ -1,18 +1,33 @@
 <template name="admin">
   <h1>Admin</h1>
-  {{> add_new_kennel}}
+  {{> add_kennel_form}}
   {{> list_existing_kennels}}
 </template>
 
-<template name="add_new_kennel">
-  <button>Add a kennel</button>
+<template name="add_kennel_form">
+  {{> quickForm collection="Kennels" id="add_kennel_form" type="insert"}}
 </template>
 
 <template name="list_existing_kennels">
   <h2>List kennels</h2>
-  <ul>
-  {{#each kennels}}
-    <li>Name: {{name}}, Admin: {{admin}}</li>
-  {{/each}}
-  </ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Admin</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each kennels}}
+        <tr>
+          <td>{{_id}}</td>
+          <td>{{name}}</td>
+          <td>{{admin}}</td>
+          <td><a id="delete-kennel-btn" class="clickable glyphicon glyphicon-trash"></a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </template>
