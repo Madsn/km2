@@ -6,3 +6,7 @@ var KennelSchema = new SimpleSchema({
 });
 
 Kennels.attachSchema(KennelSchema);
+
+if (Meteor.isClient) {
+  window.Kennels = Kennels;
+}
