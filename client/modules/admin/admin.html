@@ -5,7 +5,14 @@
 </template>
 
 <template name="add_kennel_form">
-  {{> quickForm collection="Kennels" id="add_kennel_form" type="insert"}}
+  {{#autoForm collection="Kennels" id="add_kennel_form" type="insert"}}
+    <fieldset>
+      <legend>Add Kennel</legend>
+      {{> afQuickField name="name"}}
+      {{> afQuickField name="owner" type="select2" select2Options=userSearchOptions }}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
 </template>
 
 <template name="list_existing_kennels">
@@ -15,7 +22,7 @@
       <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>Admin</th>
+        <th>owner</th>
         <th></th>
       </tr>
     </thead>
@@ -24,7 +31,7 @@
         <tr>
           <td>{{_id}}</td>
           <td>{{name}}</td>
-          <td>{{admin}}</td>
+          <td>{{owner}}</td>
           <td><a id="delete-kennel-btn" class="clickable glyphicon glyphicon-trash"></a></td>
         </tr>
       {{/each}}
