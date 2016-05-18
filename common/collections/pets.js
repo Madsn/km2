@@ -1,11 +1,12 @@
+import {Schema} from './schema.js';
 export const Pets = new Mongo.Collection('pets');
 
-var PetSchema = new SimpleSchema({
+Schema.PetSchema = new SimpleSchema({
   name: {type: String},
   owner: {type: Meteor.User},
 });
 
-Pets.attachSchema(PetSchema);
+Pets.attachSchema(Schema.PetSchema);
 
 if (Meteor.isClient) {
   window.Pets = Pets;
