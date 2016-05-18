@@ -10,3 +10,9 @@ Kennels.attachSchema(KennelSchema);
 if (Meteor.isClient) {
   window.Kennels = Kennels;
 }
+
+if (Meteor.isServer) {
+  Meteor.publish('kennels', function kennelsPublication() {
+    return Kennels.find();
+  });
+}
