@@ -27,6 +27,16 @@
                   Admin
                 {{/linkTo}}
               </li>
+              <li class="{{isActiveRoute 'Kenneldash'}}">
+                {{#linkTo 'Kenneldash'}}
+                  Kennel Dashboard
+                {{/linkTo}}
+              </li>
+              <li class="{{isActiveRoute 'Availability'}}">
+                {{#linkTo 'Availability'}}
+                  Availability 
+                {{/linkTo}}
+              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               {{> loginButtons}}
