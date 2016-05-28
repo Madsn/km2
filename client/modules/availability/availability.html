@@ -3,52 +3,23 @@
     <table id="availability-table" class="table">
         <thead>
             <tr>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-                <th>Sunday</th>
+                <th class="col-md-1">Mon</th>
+                <th class="col-md-1">Tue</th>
+                <th class="col-md-1">Wed</th>
+                <th class="col-md-1">Thu</th>
+                <th class="col-md-1">Fri</th>
+                <th class="col-md-1">Sat</th>
+                <th class="col-md-1">Sun</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-            </tr>
-            <tr>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-            </tr>
-            <tr>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-            </tr>
-            <tr>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-                <td>{{> cell}}</td>
-            </tr>
+            {{# each row in getRows}}
+                <tr class="availability-row">
+                    {{# each day in row}}
+                        <td class="col-md-1">{{> cell data=day}}</td>
+                    {{/each}}
+                </tr>
+            {{/each}}
         </tbody>
     </table>
 </template>
@@ -56,10 +27,12 @@
 <template name="cell">
     <div class="panel panel-default">
         <div class="panel-heading">
-            Heading
+            {{data.day}}
         </div>
         <div class="panel-body">
-            Basic panel example
+            {{# each entry in data.contents}}
+                <br/>{{entry}}
+            {{/each}}
         </div>
     </div>
 </template>
