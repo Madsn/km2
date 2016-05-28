@@ -8,4 +8,21 @@
 }
 #availability-table th {
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+#availability-table .panel,
+#availability-table .panel-body {
+    border: none;
+    box-shadow: none;
+}
+#availability-table .panel-heading {
+    vertical-align: top;
+}
+#availability-table .panel-body {
+    padding-top: 0;
+    margin-top: -14px;
+    padding-bottom: 4px;
+    min-height: 90px;
+    vertical-align: bottom;
 }
