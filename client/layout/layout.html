@@ -34,7 +34,7 @@
               </li>
               <li class="{{isActiveRoute 'Availability'}}">
                 {{#linkTo 'Availability'}}
-                  Availability 
+                  Availability
                 {{/linkTo}}
               </li>
             </ul>
@@ -58,7 +58,7 @@
             <p>&copy; KennelMate 2016</p>
           </div>
           <div class="col-xs-2 text-right">
-            <button class="btn btn-info scrollToTop">To Top</button> 
+            <button class="btn btn-info scrollToTop">To Top</button>
           </div>
         </div>
       </div>
@@ -72,20 +72,20 @@
         }
       });
       $(document).ready(function(){
-      	//Check to see if the window is top if not then display button
-      	$(window).scroll(function(){
-      		if ($(this).scrollTop() > 100) {
-      			$('.scrollToTop').fadeIn();
-      		} else {
-      			$('.scrollToTop').hide();
-      		}
-      	});
-      	
-      	//Click event to scroll to top
-      	$('.scrollToTop').click(function(){
-      		$('html, body').animate({scrollTop : 0},800);
-      		return false;
-      	});
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 100) {
+          	$('.scrollToTop').fadeIn();
+          } else {
+          	$('.scrollToTop').hide();
+          }
+        });
+      
+        //Click event to scroll to top
+        $('.scrollToTop').click(function(){
+          $('html, body').animate({scrollTop : 0},800);
+            return false;
+        });
       });
     </script>
   </body>
