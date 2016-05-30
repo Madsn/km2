@@ -1,11 +1,29 @@
+function daysInMonth(month,year) {
+    return new Date(year, month, 0).getDate();
+}
+
+Template.availability.onCreated(function() {
+  var instance = this;
+  instance.state = new ReactiveDict();
+  this.state.setDefault({
+    options: {
+      year: new Date().getFullYear(),
+      month: new Date().getMonth()
+    }
+  });
+});
+
 Template.availability.helpers({
   getOptions() {
-    return {
-      year: 2016,
-      month: 5
-    }
+    return Template.instance().state.get('options');
   },
   getRows() {
+    console.log("getting rows");
+    var options = Template.instance().state.get('options');
+    var firstDay = new Date(options.year, options.month, 1);
+    var lastDay = new Date(options.year, options.month+1, 0);
+    var daysFromLastMonth = 6 - firstDay.getDay();
+    var daysFromNextMonth = 7 - lastDay.getDay();
     return [
       [
         {day: 25, contents: ["hello"]},
