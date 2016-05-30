@@ -27,7 +27,6 @@ kadira:flow-router
 huttonr:bootstrap3
 less
 kadira:blaze-layout
-session
 zimme:active-route
 arillo:flow-router-helpers
 accounts-password
@@ -37,3 +36,5 @@ msavin:mongol
 aldeed:autoform
 aldeed:autoform-select2
 check
+reactive-dict
+session
