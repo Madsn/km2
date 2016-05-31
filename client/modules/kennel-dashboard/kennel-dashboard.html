@@ -24,14 +24,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>View booking</td>
-                        <td><span class="badge alert-success">Boarding</span></td>
-                        <td>Thisen</td>
-                        <td>1 dog for 3 days</td>
-                        <td><span class="text-info">Checking in today</span></td>
+                    {{#each booking in bookings}}
+                        <tr>
+                            <td>
+                                <a href="{{pathFor '/bookings/:id' id=booking._id}}">
+                                    View booking
+                                </a>
+                            </td>
+                            <td><span class="badge alert-success">{{booking.type}}</span></td>
+                            <td>{{booking.customer}}</td>
+                            <td>{{booking.details}}</td>
+                            <td><span class="text-info">{{booking.status}}</span></td>
                         <td><span title="Edit booking" class="clickable glyphicon glyphicon-edit"></span></td>
-                    </tr>
+                        </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
@@ -56,14 +62,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>View booking</td>
-                        <td><span class="badge alert-success">Boarding</span></td>
-                        <td>Thisen</td>
-                        <td>1 dog for 3 days</td>
-                        <td><span class="text-info">2 days till check-out</span></td>
-                        <td><span title="Check-out" class="clickable glyphicon glyphicon-share"></span></td>
-                    </tr>
+                    {{#each booking in bookings}}
+                        <tr>
+                            <td>
+                                <a href="{{pathFor '/bookings/:id' id=booking._id}}">
+                                    View booking
+                                </a>
+                            </td>
+                            <td><span class="badge alert-success">{{booking.type}}</span></td>
+                            <td>{{booking.customer}}</td>
+                            <td>{{booking.details}}</td>
+                            <td><span class="text-info">{{booking.status}}</span></td>
+                            <td><span title="Check-out" class="clickable glyphicon glyphicon-share"></span></td>
+                        </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
