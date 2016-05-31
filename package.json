@@ -2,13 +2,10 @@
   "name": "kennel-mate",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "test": "meteor test --once --driver-package dispatch:mocha-phantomjs",
+    "test-full": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
-  },
-  "scripts": {
-  	"test": "meteor test --once --driver-package dispatch:mocha-phantomjs",
-  	"test-full": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
   }
 }

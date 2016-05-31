@@ -1,0 +1,11 @@
+.card {
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+.card .page-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}

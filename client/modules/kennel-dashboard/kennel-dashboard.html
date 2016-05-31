@@ -1,3 +1,71 @@
 <template name="kenneldash">
-    <h1>Kenneldash</h1>
+    <div class="page-header">
+        <h2>Kenneldash</h2>
+	</div>
+	{{> due_to_check_in}}
+	{{> occupants}}
+</template>
+
+<template name="due_to_check_in">
+	<div class="row">
+	    <div class="card col-md-12">
+            <div class="page-header">
+    	        <h3>Due to check in</h3>
+        	</div>
+            <table class="table">
+                <thead>
+                    <tr>
+            	        <th></th>
+            	        <th>Booking type</th>
+            	        <th>Customer</th>
+            	        <th>Details</th>
+            	        <th>Status</th>
+            	        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>View booking</td>
+                        <td><span class="badge alert-success">Boarding</span></td>
+                        <td>Thisen</td>
+                        <td>1 dog for 3 days</td>
+                        <td><span class="text-info">Checking in today</span></td>
+                        <td><span title="Edit booking" class="clickable glyphicon glyphicon-edit"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
+
+<template name="occupants">
+	<div class="row">
+	    <div class="card col-md-12">
+            <div class="page-header">
+    	        <h3>Occupants</h3>
+        	</div>
+            <table class="table">
+                <thead>
+                    <tr>
+            	        <th></th>
+            	        <th>Booking type</th>
+            	        <th>Customer</th>
+            	        <th>Details</th>
+            	        <th>Status</th>
+            	        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>View booking</td>
+                        <td><span class="badge alert-success">Boarding</span></td>
+                        <td>Thisen</td>
+                        <td>1 dog for 3 days</td>
+                        <td><span class="text-info">2 days till check-out</span></td>
+                        <td><span title="Check-out" class="clickable glyphicon glyphicon-share"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </template>
