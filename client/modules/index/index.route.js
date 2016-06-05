@@ -1,3 +1,4 @@
+/*
 Template.index.onCreated(function helloOnCreated() {
   // counter starts at 0
   Session.set('counter', 0);
@@ -18,10 +19,12 @@ Template.index.events({
     });
   },
 });
+*/
 
 FlowRouter.route('/', {
   name: 'Index',
+  reactComponent: function() { return Index; },
   action(params, queryParams) {
-    BlazeLayout.render('layout', {container: 'index'});
+    BlazeLayout.render('layout', {app_data: {title: 'Index'}});
   }
 });
