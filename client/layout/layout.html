@@ -37,11 +37,6 @@
                   Availability
                 {{/linkTo}}
               </li>
-              <li class="{{isActiveRoute 'Bookings'}}">
-                {{#linkTo 'Bookings'}}
-                  Bookings
-                {{/linkTo}}
-              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               {{> loginButtons}}
@@ -52,15 +47,9 @@
     </div>
     <div id="content">
       <button id="addNotification">Test</button>
-      {{#if hasReactComponent}}
-        <div class="container" style="padding-top: 15px;">
-          {{> React component=reactComponent app_data=app_data}}
-        </div>
-      {{else}}
-        <div class="container" style="padding-top: 15px;">
-          {{> Template.dynamic template=page}}
-        </div>
-      {{/if}}
+      <div class="container" style="padding-top: 15px;">
+        {{> Template.dynamic template=container}}
+      </div>
     </div>
     <div class="container">
       <div class="row">

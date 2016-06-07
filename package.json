@@ -6,8 +6,6 @@
     "test-full": "meteor test --full-app --once --driver-package dispatch:mocha-phantomjs"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "meteor-node-stubs": "~0.2.0"
   }
 }

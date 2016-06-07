@@ -14,7 +14,7 @@ Template.due_to_check_in.helpers({
         {_id: 4, type: "Boarding", customer: "Madsn", details: "1 dog for 3 days", status: "Checking in today" }
       ];
   }
-});
+})
 
 FlowRouter.route('/kenneldash', {
   name: 'Kenneldash',
