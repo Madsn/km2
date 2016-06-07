@@ -3,6 +3,10 @@ Template.layout.helpers({
     return !_.isUndefined(FlowRouter.current().route.options.reactComponent);
   },
   reactComponent: function() {
-    return FlowRouter.current().route.options.reactComponent();
+    if (!_.isUndefined(FlowRouter.current().route.options.reactComponent)) {
+        return FlowRouter.current().route.options.reactComponent();
+    } else {
+        return '';
+    }
   }
 });
